@@ -1,21 +1,15 @@
-.carouselcard {
-  text-align: center;
-}
+@use 'Carousel';
 
-.carouselitem {
-  padding: 10%;
-  background-color: whitesmoke;
-}
+$font-stack: "Trebuchet MS", sans-serif;
 
 body {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: $font-stack;
   background-color: white;
 }
 
 html {
   display: inline;
 }
-
 body,
 div,
 span,
@@ -42,7 +36,6 @@ img {
 #title {
   margin-top: 0px;
 }
-
 /*
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
@@ -59,5 +52,3 @@ img {
   }
 }
 */
-
-/*# sourceMappingURL=App.css.map */
