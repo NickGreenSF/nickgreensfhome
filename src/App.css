@@ -7,13 +7,35 @@
   background-color: whitesmoke;
 }
 
+#logo {
+  max-width: 5%;
+  float: right;
+  margin: auto;
+  margin-top: 0%;
+}
+
+#title {
+  margin-top: 0px;
+  height: 5%;
+}
+
+#selfcard {
+  width: 70%;
+  border: 1px solid gray;
+  padding: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#me {
+  max-width: 20%;
+}
+
 body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: white;
-}
-
-html {
-  display: inline;
 }
 
 body,
@@ -22,25 +44,6 @@ span,
 img {
   margin: 0;
   padding: 0;
-}
-
-#root {
-  margin-top: 0px;
-}
-
-#logo {
-  max-width: 5%;
-  float: right;
-  margin: auto;
-  margin-top: 0%;
-}
-
-#me {
-  max-width: 10%;
-}
-
-#title {
-  margin-top: 0px;
 }
 
 /*

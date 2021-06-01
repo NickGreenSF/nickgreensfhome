@@ -1,4 +1,6 @@
 @use 'Carousel';
+@use 'TopPart';
+@use 'SelfCard';
 
 $font-stack: "Trebuchet MS", sans-serif;
 
@@ -7,34 +9,12 @@ body {
   background-color: white;
 }
 
-html {
-  display: inline;
-}
 body,
 div,
 span,
 img {
   margin: 0;
   padding: 0;
-}
-
-#root {
-  margin-top: 0px;
-}
-
-#logo {
-  max-width: 5%;
-  float: right;
-  margin: auto;
-  margin-top: 0%;
-}
-
-#me {
-  max-width: 10%;
-}
-
-#title {
-  margin-top: 0px;
 }
 /*
 @media (prefers-reduced-motion: no-preference) {
