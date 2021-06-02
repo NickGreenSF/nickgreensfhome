@@ -4,8 +4,16 @@ import me from '../me.jpg';
 function SelfCard() {
   return (
     <div id="selfcard">
-      <span>Hi, I'm Nick Green! I'm a computer science student at SFSU.</span>
-      <img id="me" src={me} alt="Me." />
+      <div>
+        <h2 id="aboutme">About Me</h2>
+        <h3 id="selftext">
+          Hi, I'm Nick Green! I'm a computer science student at SFSU, working in
+          React, HTML/CSS/JS, and others.
+        </h3>
+      </div>
+      <div>
+        <img id="me" src={me} alt="Me." />
+      </div>
     </div>
   );
 }

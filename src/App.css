@@ -8,7 +8,7 @@
 }
 
 #logo {
-  max-width: 5%;
+  max-width: 4%;
   float: right;
   margin: auto;
   margin-top: 0%;
@@ -20,17 +20,31 @@
 }
 
 #selfcard {
-  width: 70%;
+  width: 80%;
   border: 1px solid gray;
-  padding: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   margin-left: 10%;
   margin-right: 10%;
+  display: grid;
+  grid-template-columns: 55% 45%;
 }
 
 #me {
-  max-width: 20%;
+  min-width: 50%;
+  max-width: 70%;
+  float: right;
+}
+
+#selftext {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border: 1px solid black;
+}
+
+#aboutme {
+  text-align: center;
 }
 
 body {
@@ -44,6 +58,7 @@ span,
 img {
   margin: 0;
   padding: 0;
+  font-size: 100%;
 }
 
 /*

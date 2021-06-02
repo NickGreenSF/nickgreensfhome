@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import TopPart from './component/TopPart';
-import PortfolioCarousel from './component/PortfolioCarousel';
-import SelfCard from './component/SelfCard';
+import PortfolioCarousel from './pages/PortfolioCarousel';
+import SiteDisplay from './pages/SiteDisplay';
 
 function App() {
   return (
     <BrowserRouter>
       <div>
         <TopPart />
-        <SelfCard />
         <Switch>
           <Route path="/" exact component={PortfolioCarousel} />
+          <Route path="/project" exact component={SiteDisplay} />
         </Switch>
       </div>
     </BrowserRouter>
