@@ -1,12 +1,19 @@
 @use 'Carousel';
 @use 'TopPart';
 @use 'SelfCard';
+@use 'SiteDisplay';
 
-$font-stack: "Trebuchet MS", sans-serif;
+$font-stack: Arial, sans-serif;
+
+/*font-family: ProximaNova,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;*/
 
 body {
   font-family: $font-stack;
-  background-color: white;
+  background-color: lightsteelblue;
+  min-width: 1200px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -16,6 +23,8 @@ img {
   margin: 0;
   padding: 0;
   font-size: 100%;
+  margin-bottom: 5px;
+  text-align: center;
 }
 /*
 @media (prefers-reduced-motion: no-preference) {

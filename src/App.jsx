@@ -14,6 +14,9 @@ function App() {
           <Route path="/" exact component={PortfolioCarousel} />
           <Route path="/project" exact component={SiteDisplay} />
         </Switch>
+        <div style={{ fontSize: '75%' }}>
+          This website is mine. Contact me at nicholasgreensf@gmail.com.
+        </div>
       </div>
     </BrowserRouter>
   );
