@@ -5,7 +5,7 @@ function TopPart() {
   return (
     <div>
       <h1 id="title">
-        <a id="sitelink" href="/">
+        <a id="sitelink" href="./nickgreensfhome/">
           NickGreenSF
         </a>
         <img id="logo" src={logo} alt="Site logo" />
