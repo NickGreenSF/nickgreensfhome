@@ -24,13 +24,13 @@ function PortfolioCarousel() {
         <CarouselItem className="carouselitem">
           <Card className="carouselcard">
             <img src={banner0} alt="RoutineList banner" />
-            <a href="../nickgreensfhome/project?p=0">RoutineList</a>
+            <a href="./project?p=0">RoutineList</a>
           </Card>
         </CarouselItem>
         <CarouselItem className="carouselitem">
           <Card className="carouselcard">
             <img src={banner1} alt="nickgreensf.com banner" />
-            <a href="../nickgreensfhome/project?p=1">nickgreensf.com</a>
+            <a href="./project?p=1">nickgreensf.com</a>
           </Card>
         </CarouselItem>
       </Carousel>

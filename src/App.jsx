@@ -11,8 +11,8 @@ function App() {
       <div>
         <TopPart />
         <Switch>
-          <Route path="/nickgreensfhome/" exact component={PortfolioCarousel} />
-          <Route path="/nickgreensfhome/project" component={SiteDisplay} />
+          <Route path="/" exact component={PortfolioCarousel} />
+          <Route path="/project" component={SiteDisplay} />
         </Switch>
         <div style={{ fontSize: '75%' }}>
           This website is mine. Contact me at nicholasgreensf@gmail.com.
