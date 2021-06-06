@@ -14,7 +14,7 @@
 }
 .carouselcard a {
   font-size: 2vw;
-  margin-top: 5vw;
+  margin-top: 4vw;
 }
 @media screen and (max-width: 1200px) {
   .carouselcard a {
@@ -23,7 +23,7 @@
 }
 @media screen and (max-width: 1200px) {
   .carouselcard a {
-    margin-top: 2.5em;
+    margin-top: 2em;
   }
 }
 
