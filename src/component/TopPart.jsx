@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../ng.png';
 
 function TopPart() {
   return (
@@ -8,7 +7,7 @@ function TopPart() {
         <a id="sitelink" href="./">
           NickGreenSF
         </a>
-        <img id="logo" src={logo} alt="Site logo" />
+        <span id="contact">Contact me at nicholasgreensf@gmail.com</span>
       </h1>
     </div>
   );

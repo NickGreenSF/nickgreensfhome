@@ -48,13 +48,6 @@
   width: 10px;
 }
 
-#logo {
-  max-width: 4%;
-  float: right;
-  margin: auto;
-  margin-top: 0%;
-}
-
 #title {
   margin-top: 0px;
   height: 5%;
@@ -69,6 +62,13 @@
 
 #sitelink {
   color: black;
+}
+
+#contact {
+  float: right;
+  font-size: 50%;
+  margin-top: 1%;
+  font-style: normal;
 }
 
 #selfcard {
