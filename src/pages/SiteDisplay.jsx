@@ -20,13 +20,13 @@ const data = [
   [
     'I Love This Song!',
     'I Love This Song is a forum in which users can post about why they like a specific song and message other users. It was created as a way to express and share positivity about music.',
-    'This was built in June and July 2021. The front end is built primarily in React JavaScript and Sass CSS (SCSS). The back end uses Typescript to run MySQL. It is hosted on a DigitalOcean droplet.',
+    'This was built in June and July 2021. The front end is built primarily in React JavaScript and Sass CSS (SCSS). The back end uses Typescript to run MySQL.',
     'View the code at the ',
-    'Github page ',
+    'Github page.',
     'https://github.com/NickGreenSF/ilovethissong',
-    'and visit the site ',
-    'here.',
-    'http://ilovethissong.site',
+    '',
+    '',
+    '',
   ],
   [
     'RoutineList',

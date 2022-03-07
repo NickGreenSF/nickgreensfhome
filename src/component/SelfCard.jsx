@@ -7,8 +7,8 @@ function SelfCard() {
       <div id="carddesc">
         <h2 id="aboutme">About Me</h2>
         <h3 id="selftext">
-          Hi, I'm Nick Green! I'm a computer science student at SFSU, working in
-          React JS, Sass CSS, HTML/CSS/JS, and others.
+          Hi, I'm Nick Green! I'm a computer science graduate from SFSU, working
+          in React JS/Sass CSS, Python, and others.
         </h3>
       </div>
       <div>
