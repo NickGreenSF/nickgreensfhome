@@ -9,7 +9,6 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <TopPart />
         <Switch>
           <Route path="/" exact component={PortfolioCarousel} />
           <Route path="/project" component={SiteDisplay} />
