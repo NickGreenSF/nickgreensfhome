@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, StyledComponent } from 'styled-components';
 import { fadeInDownBig, fadeIn, bounce } from 'react-animations';
 import './App.css'
 import me from './images/me.jpg'
+import stardle from './images/stardle.png'
+import stardle2 from './images/stardle-2.png'
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -221,8 +223,10 @@ const AboutText = styled.div`
 const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 0;
   margin-left: ${width / 10}px;
   margin-right: ${width / 10}px;
+  margin-bottom: ${height / 10}px;
   @media screen and (max-width: 1000px){
     grid-template-columns: 1fr;
   }
@@ -238,6 +242,10 @@ const MeImage = styled.img`
   margin: auto;
 `
 
+const StardleLogo : StyledComponent<'span', any, {}, never> = styled.span`
+  color: rgba(127, 127, 127, 0.9);
+`;
+
 const Green = styled.span`
   color: ${green};
 `
@@ -252,6 +260,7 @@ export default function App() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       // gonna do some stuff with the bools here.
+      console.log(window.scrollY)
     })
     setTimeout(() => {
       setMyNameDisp(true);
@@ -267,9 +276,9 @@ export default function App() {
       <Navbar style={navbarDisp ? {} : {display: "none"}}>
         <NavbarText style={{left: width * .05}}>NICKGREENSF</NavbarText>
         <NavbarLink style={{left: width * .55}} href="#about">ABOUT</NavbarLink>
-        <NavbarLink style={{left: width * .65}} href="#about">STARDLE</NavbarLink>
-        <NavbarLink style={{left: width * .75}} href="#about">PROJECTS</NavbarLink>
-        <NavbarLink style={{left: width * .85}} href="#about">CONTACT</NavbarLink>
+        <NavbarLink style={{left: width * .65}} href="#stardle">STARDLE</NavbarLink>
+        <NavbarLink style={{left: width * .75}} href="#about">ROUTINELIST</NavbarLink>
+        <NavbarLink style={{left: width * .85}} href="#about">PROJECTS</NavbarLink>
       </Navbar>
       <LeftSidebarSpacer style={navbarDisp ? {display: "none"} : {}}></LeftSidebarSpacer>
       <LeftSidebar style={navbarDisp ? {} : {display: "none"}}>
@@ -281,7 +290,7 @@ export default function App() {
         <RightText style={{right: height * .4}}>nicholasgreensf@gmail.com</RightText>
       </RightSidebar>
       <RightSidebarSpacer style={navbarDisp ? {display: "none"} : {}}></RightSidebarSpacer>
-      <Screen style={{height: height * (14/15)}}>
+      <Screen style={{height: height * (12/15)}}>
         <Hi>
           Hello there.
         </Hi>
@@ -316,6 +325,7 @@ export default function App() {
               I work mostly in <Green>Python</Green> and <Green>Typescript,</Green> and have experience in many other tools and languages, such as <Green>Java,</Green> <Green>C,</Green> <Green>C++,</Green> <Green>MySQL,</Green> <Green>Sass,</Green> and <Green>Docker.</Green>
             </AboutText>
             <AboutText>
+              <a id="stardle"></a>
               I ambitiously look forward to my time spent as a professional software developer and the many challenges it will bring. Thanks for reading!
             </AboutText>
           </div>
@@ -325,7 +335,29 @@ export default function App() {
         </AboutGrid>
       </Screen>
       <Screen>
-        next
+        <AboutGrid>
+          <MeImageHolder>
+            <MeImage src={stardle}></MeImage>
+          </MeImageHolder>
+          <div>
+            <AboutTitle>
+              <StardleLogo>S T A R D L E</StardleLogo>
+            </AboutTitle>
+            <AboutText>
+              I've always loved movie trivia, so much so that i often find it more satisfying to look up facts about a movie than watch the movie. When Wordle blew up, I thought the “daily quiz” format would blend perfectly with that interest, and out of that thought came the idea for STARDLE.
+            </AboutText>
+            <AboutText>
+              STARDLE is a daily movie trivia game that challenges you to guess the name of a movie using only the names of actors in the movie. Like Wordle, you get six tries, and each wrong guess reveals more information about the solution. Unlike Wordle, the answer is a movie title, which means it's not restricted to word length. It's challenging, and it's a fun way to spend a couple minutes.
+            </AboutText>
+          </div>
+          <div style={{marginTop: height / 75}}>
+            <AboutText>I built STARDLE in April 2022 in React Typescript. The build process was very engaging. I seized a great opportunity to learn more about aesthetics, animations, and game design. Working on a project like this also afforded me the opportunity to continue to grow more comfortable with Typescript, a language I find very easy to use and capable of a lot more than people may give it credit for.</AboutText>
+            <AboutText>I released STARDLE in May, on <a href="https://stardle.xyz" target="_blank">stardle.xyz</a>, and if you're curious, head on over and see how you fare against my daily onslaught of movie trivia!</AboutText>
+          </div>
+          <MeImageHolder>
+            <MeImage src={stardle2}></MeImage>
+          </MeImageHolder>
+        </AboutGrid>
       </Screen>
     </TopLevel>
   );
