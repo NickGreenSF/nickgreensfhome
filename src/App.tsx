@@ -344,7 +344,7 @@ export default function App() {
               <StardleLogo>S T A R D L E</StardleLogo>
             </AboutTitle>
             <AboutText>
-              I've always loved movie trivia, so much so that i often find it more satisfying to look up facts about a movie than watch the movie. When Wordle blew up, I thought the “daily quiz” format would blend perfectly with that interest, and out of that thought came the idea for STARDLE.
+              I've always loved movie trivia, so much so that I often find it more satisfying to look up facts about a movie than watch the movie. When Wordle blew up, I thought the “daily quiz” format would blend perfectly with that interest, and out of that thought came the idea for STARDLE.
             </AboutText>
             <AboutText>
               STARDLE is a daily movie trivia game that challenges you to guess the name of a movie using only the names of actors in the movie. Like Wordle, you get six tries, and each wrong guess reveals more information about the solution. Unlike Wordle, the answer is a movie title, which means it's not restricted to word length. It's challenging, and it's a fun way to spend a couple minutes.
