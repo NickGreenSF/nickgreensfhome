@@ -5,6 +5,8 @@ import './App.css'
 import me from './images/me.jpg'
 import stardle from './images/stardle.png'
 import stardle2 from './images/stardle-2.png'
+import rlbanner from './images/banner-1.png'
+import rluse from './images/app1-1.png'
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -45,7 +47,6 @@ const FadeInText = styled.span`
 
 const TopLevel = styled.div`
   width: 100%;
-  height: ${height * 5}px;
   position: absolute;
 `
 
@@ -277,7 +278,7 @@ export default function App() {
         <NavbarText style={{left: width * .05}}>NICKGREENSF</NavbarText>
         <NavbarLink style={{left: width * .55}} href="#about">ABOUT</NavbarLink>
         <NavbarLink style={{left: width * .65}} href="#stardle">STARDLE</NavbarLink>
-        <NavbarLink style={{left: width * .75}} href="#about">ROUTINELIST</NavbarLink>
+        <NavbarLink style={{left: width * .75}} href="#rtl">ROUTINELIST</NavbarLink>
         <NavbarLink style={{left: width * .85}} href="#about">PROJECTS</NavbarLink>
       </Navbar>
       <LeftSidebarSpacer style={navbarDisp ? {display: "none"} : {}}></LeftSidebarSpacer>
@@ -357,6 +358,32 @@ export default function App() {
           <MeImageHolder>
             <MeImage src={stardle2}></MeImage>
           </MeImageHolder>
+        </AboutGrid>
+        <a id="rtl"></a>
+      </Screen>
+      <Screen>
+        <AboutGrid>
+          <div>
+            <AboutTitle>
+              RoutineList
+            </AboutTitle>
+            <AboutText>
+              While a student at SFSU, I took a class called Human Computer Interaction, during which we had to design a mobile app. After making my design, i realized two things, first that the design was very achievable, and second, that it would make more sense for me to make it as a Chrome extension. RoutineList was born!
+            </AboutText>
+            <AboutText>
+              RoutineList is a to-do list app. Users can set tasks for themselves to a specific time of day and days of the week, and those tasks will uncheck themselves on those days of the week at those times of day. It ended up being very useful for me at a time where I needed a little help self-directing, and it's always great to get utility out of your own work.
+            </AboutText>
+          </div>
+          <MeImageHolder>
+            <MeImage src={rlbanner}></MeImage>
+          </MeImageHolder>
+          <MeImageHolder>
+            <MeImage src={rluse}></MeImage>
+          </MeImageHolder>
+          <div style={{marginTop: height / 75}}>
+            <AboutText>At a time where I was still getting my legs under me as a developer, I found the design process for RoutineList to be very satisfying, building it in standard HTML/CSS/JS and taking advantage of tools like Chrome's user storage. It was finished by May 2021, in time to present it for the final project of the class. I'd love to flesh out the design more in the future, and I'm comfortable with where it is for now.</AboutText>
+            <AboutText>If, like me, you're feeling a little disorganized, you can check out the extension for yourself <a href="https://chrome.google.com/webstore/detail/routinelist/eckihielkdkafbhekdgpbjlloiddjdpd?hl=en" target="_blank">here</a>.</AboutText>
+          </div>
         </AboutGrid>
       </Screen>
     </TopLevel>
