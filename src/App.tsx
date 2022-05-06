@@ -7,6 +7,8 @@ import stardle from './images/stardle.png'
 import stardle2 from './images/stardle-2.png'
 import rlbanner from './images/banner-1.png'
 import rluse from './images/app1-1.png'
+import ilts from './images/banner-0.png'
+import sep from './images/sep.png'
 
 const width = window.innerWidth
 const height = window.innerHeight
@@ -209,19 +211,19 @@ const ColorTransition = styled.div`
   }
 `
 
-const AboutTitle = styled.div`
+const Title = styled.div`
   text-align: center;
   font-size: ${height / 25}px;
   color: #e6f1ff;
 `
 
-const AboutText = styled.div`
+const DescText = styled.div`
   font-size: ${height / 50}px;
   color: ${slate};
   margin-bottom: ${height / 75}px;
 `
 
-const AboutGrid = styled.div`
+const AdaptedGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 0;
@@ -233,12 +235,12 @@ const AboutGrid = styled.div`
   }
 `
 
-const MeImageHolder = styled.div`
+const ImageHolder = styled.div`
   display: flex;
   justify-content: center;
 `
 
-const MeImage = styled.img`
+const RestrictedImage = styled.img`
   width: ${Math.max(width / 5, height / 3)}px;
   margin: auto;
 `
@@ -249,6 +251,13 @@ const StardleLogo : StyledComponent<'span', any, {}, never> = styled.span`
 
 const Green = styled.span`
   color: ${green};
+`
+
+const SiteLink = styled.a`
+  color: ${green};
+  :hover{
+    color: ${green};
+  }
 `
 
 const initBool : boolean = false;
@@ -306,85 +315,108 @@ export default function App() {
         <a id="about"></a>
       </Screen>
       <Screen>
-        <AboutGrid>
+        <AdaptedGrid>
           <div>
-            <AboutTitle>
+            <Title>
               About Me
-            </AboutTitle>
-            <AboutText>
+            </Title>
+            <DescText>
               I started coding in high school and was immediately drawn to it.
               I liked watching myself get better at it - it struck me as a skill worth learning, and worth making into a trade. 
               After graduating from San Francisco State in February 2022, majoring in computer science, I've been looking for work while making 
               myself the best coder I can possibly be through both personal projects and comprehensive algorithm practice. 
-            </AboutText>
-            <AboutText> 
+            </DescText>
+            <DescText> 
               What I like about coding and development is the many problems it presents through the same overall lens; various coding 
               projects and problems I have worked on have felt like anything from math homework to making a short film, and I appreciate how much diversity 
               the field can bring out.
-            </AboutText>
-            <AboutText>
+            </DescText>
+            <DescText>
               I work mostly in <Green>Python</Green> and <Green>Typescript,</Green> and have experience in many other tools and languages, such as <Green>Java,</Green> <Green>C,</Green> <Green>C++,</Green> <Green>MySQL,</Green> <Green>Sass,</Green> and <Green>Docker.</Green>
-            </AboutText>
-            <AboutText>
+            </DescText>
+            <DescText>
               <a id="stardle"></a>
               I ambitiously look forward to my time spent as a professional software developer and the many challenges it will bring. Thanks for reading!
-            </AboutText>
+            </DescText>
           </div>
-          <MeImageHolder>
-            <MeImage src={me}></MeImage>
-          </MeImageHolder>
-        </AboutGrid>
+          <ImageHolder>
+            <RestrictedImage src={me}></RestrictedImage>
+          </ImageHolder>
+        </AdaptedGrid>
       </Screen>
       <Screen>
-        <AboutGrid>
-          <MeImageHolder>
-            <MeImage src={stardle}></MeImage>
-          </MeImageHolder>
+        <AdaptedGrid>
+          <ImageHolder>
+            <RestrictedImage src={stardle}></RestrictedImage>
+          </ImageHolder>
           <div>
-            <AboutTitle>
+            <Title>
               <StardleLogo>S T A R D L E</StardleLogo>
-            </AboutTitle>
-            <AboutText>
+            </Title>
+            <DescText>
               I've always loved movie trivia, so much so that I often find it more satisfying to look up facts about a movie than watch the movie. When Wordle blew up, I thought the “daily quiz” format would blend perfectly with that interest, and out of that thought came the idea for STARDLE.
-            </AboutText>
-            <AboutText>
+            </DescText>
+            <DescText>
               STARDLE is a daily movie trivia game that challenges you to guess the name of a movie using only the names of actors in the movie. Like Wordle, you get six tries, and each wrong guess reveals more information about the solution. Unlike Wordle, the answer is a movie title, which means it's not restricted to word length. It's challenging, and it's a fun way to spend a couple minutes.
-            </AboutText>
+            </DescText>
           </div>
           <div style={{marginTop: height / 75}}>
-            <AboutText>I built STARDLE in April 2022 in React Typescript. The build process was very engaging. I seized a great opportunity to learn more about aesthetics, animations, and game design. Working on a project like this also afforded me the opportunity to continue to grow more comfortable with Typescript, a language I find very easy to use and capable of a lot more than people may give it credit for.</AboutText>
-            <AboutText>I released STARDLE in May, on <a href="https://stardle.xyz" target="_blank">stardle.xyz</a>, and if you're curious, head on over and see how you fare against my daily onslaught of movie trivia!</AboutText>
+            <DescText>I built STARDLE in April 2022 in React Typescript. The build process was very engaging. I seized a great opportunity to learn more about aesthetics, animations, and game design. Working on a project like this also afforded me the opportunity to continue to grow more comfortable with Typescript, a language I find very easy to use and capable of a lot more than people may give it credit for.</DescText>
+            <DescText>I released STARDLE in May, on <SiteLink href="https://stardle.xyz" target="_blank">stardle.xyz</SiteLink>, and if you're curious, head on over and see how you fare against my daily onslaught of movie trivia!</DescText>
           </div>
-          <MeImageHolder>
-            <MeImage src={stardle2}></MeImage>
-          </MeImageHolder>
-        </AboutGrid>
+          <ImageHolder>
+            <RestrictedImage src={stardle2}></RestrictedImage>
+          </ImageHolder>
+        </AdaptedGrid>
         <a id="rtl"></a>
       </Screen>
       <Screen>
-        <AboutGrid>
+        <AdaptedGrid>
           <div>
-            <AboutTitle>
+            <Title>
               RoutineList
-            </AboutTitle>
-            <AboutText>
+            </Title>
+            <DescText>
               While a student at SFSU, I took a class called Human Computer Interaction, during which we had to design a mobile app. After making my design, i realized two things, first that the design was very achievable, and second, that it would make more sense for me to make it as a Chrome extension. RoutineList was born!
-            </AboutText>
-            <AboutText>
+            </DescText>
+            <DescText>
               RoutineList is a to-do list app. Users can set tasks for themselves to a specific time of day and days of the week, and those tasks will uncheck themselves on those days of the week at those times of day. It ended up being very useful for me at a time where I needed a little help self-directing, and it's always great to get utility out of your own work.
-            </AboutText>
+            </DescText>
           </div>
-          <MeImageHolder>
-            <MeImage src={rlbanner}></MeImage>
-          </MeImageHolder>
-          <MeImageHolder>
-            <MeImage src={rluse}></MeImage>
-          </MeImageHolder>
+          <ImageHolder>
+            <RestrictedImage src={rlbanner}></RestrictedImage>
+          </ImageHolder>
+          <ImageHolder>
+            <RestrictedImage src={rluse}></RestrictedImage>
+          </ImageHolder>
           <div style={{marginTop: height / 75}}>
-            <AboutText>At a time where I was still getting my legs under me as a developer, I found the design process for RoutineList to be very satisfying, building it in standard HTML/CSS/JS and taking advantage of tools like Chrome's user storage. It was finished by May 2021, in time to present it for the final project of the class. I'd love to flesh out the design more in the future, and I'm comfortable with where it is for now.</AboutText>
-            <AboutText>If, like me, you're feeling a little disorganized, you can check out the extension for yourself <a href="https://chrome.google.com/webstore/detail/routinelist/eckihielkdkafbhekdgpbjlloiddjdpd?hl=en" target="_blank">here</a>.</AboutText>
+            <DescText>At a time where I was still getting my legs under me as a developer, I found the design process for RoutineList to be very satisfying, building it in standard HTML/CSS/JS and taking advantage of tools like Chrome's user storage. It was finished by May 2021, in time to present it for the final project of the class. I'd love to flesh out the design more in the future, and I'm comfortable with where it is for now.</DescText>
+            <DescText>If, like me, you're feeling a little disorganized, you can check out the extension for yourself <SiteLink href="https://chrome.google.com/webstore/detail/routinelist/eckihielkdkafbhekdgpbjlloiddjdpd?hl=en" target="_blank">here</SiteLink>.</DescText>
           </div>
-        </AboutGrid>
+        </AdaptedGrid>
+      </Screen>
+      <Screen>
+        <Title>Other Projects</Title>
+        <AdaptedGrid>
+          <div>
+            <DescText>
+              <Green>I Love This Song!</Green>, online forum dedicated to discussing one's favorite songs. Built in React and NodeJS. Makes use of the Spotify API. View the code <SiteLink href="https://github.com/NickGreenSF/ilovethissong" target="_blank">here.</SiteLink>
+            </DescText>
+            <ImageHolder>
+              <RestrictedImage src={ilts}></RestrictedImage>
+            </ImageHolder>
+          </div>
+          <div>
+            <DescText>
+              <Green>SepSolutions.net</Green>, freelance WYSIWYG website build job for a prominent chemical supplier in the western US. Link pending release.
+            </DescText>
+            <ImageHolder>
+              <RestrictedImage src={sep}></RestrictedImage>
+            </ImageHolder>
+          </div>
+        </AdaptedGrid>
+        <DescText style={{textAlign: "center"}}>Color and theming inspiration from <SiteLink href='https://brittanychiang.com/' target='_blank'>Brittany Chiang</SiteLink></DescText>
+        <DescText style={{textAlign: "center", marginBottom: height/10}}>Find me at <Green>nicholasgreensf@gmail.com</Green></DescText>
       </Screen>
     </TopLevel>
   );
