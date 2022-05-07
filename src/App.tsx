@@ -101,8 +101,15 @@ const LeftSidebar = styled.div`
   animation: 2s ${fadeInAni};
   box-shadow: 1px 1px 1px 1px black;
   @media screen and (max-width: 1000px){
-    transform: rotate(0turn);
+    display: none;
   }
+`
+
+const SidebarSub = styled.div`
+  @media screen and (min-width: 1000px){
+    display: none;
+  }
+  text-align: center;
 `
 
 const RightSidebar = styled.div`
@@ -148,7 +155,7 @@ const LeftSidebarSpacer = styled.div`
   width: ${height}px;
   background-color: ${navy};
   @media screen and (max-width: 1000px){
-    transform: rotate(0turn);
+    display: none;
   }
 `
 
@@ -354,13 +361,13 @@ export default function App() {
       <LeftSidebar style={navbarDisp ? {} : {display: "none"}}>
         <LeftText href='https://github.com/NickGreenSF' target="_blank" style={{right: height * .7}}>GitHub</LeftText>
         <LeftText href='https://www.linkedin.com/in/nicholas-green-7475a920a/' target="_blank" style={{right: height * .5}}>LinkedIn</LeftText>
-        <LeftText style={{right: height * .3}}>Resume</LeftText>
+        <LeftText href='https://drive.google.com/file/d/1KWzkqPvspUXD7olK8cfC88-L6VbKyYvE/view?usp=sharing' target='_blank' style={{right: height * .3}}>Resume</LeftText>
       </LeftSidebar>
       <RightSidebar style={navbarDisp ? {} : {display: "none"}}>
         <RightText style={{right: height * .4}}>nicholasgreensf@gmail.com</RightText>
       </RightSidebar>
       <RightSidebarSpacer style={navbarDisp ? {display: "none"} : {}}></RightSidebarSpacer>
-      <Screen style={{height: height * (12/15)}}>
+      <Screen style={{minHeight: height * (12/15), marginBottom: height/15}}>
         <Hi>
           Hello there.
         </Hi>
@@ -581,6 +588,11 @@ export default function App() {
             </ImageHolder>
           </div>
         </AdaptedGrid>
+        <SidebarSub>
+          <SiteLink href='https://github.com/NickGreenSF' target="_blank">GitHub </SiteLink>
+          <SiteLink href='https://www.linkedin.com/in/nicholas-green-7475a920a/' target="_blank">LinkedIn </SiteLink>
+          <SiteLink href='https://drive.google.com/file/d/1KWzkqPvspUXD7olK8cfC88-L6VbKyYvE/view?usp=sharing' target="_blank">Resume</SiteLink>
+        </SidebarSub>
         <DescText style={{textAlign: "center"}}>Color and theming inspiration from <SiteLink href='https://brittanychiang.com/' target='_blank'>Brittany Chiang</SiteLink></DescText>
         <DescText style={{textAlign: "center", marginBottom: height/10}}>Find me at <Green>nicholasgreensf@gmail.com</Green></DescText>
       </AniScreen>
