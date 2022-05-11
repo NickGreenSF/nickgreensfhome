@@ -13,20 +13,24 @@ import rlbanner from './images/banner-1.png';
 import rluse from './images/app1-1.png';
 import ilts from './images/banner-0.png';
 import sep from './images/sep.png';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-4QW3CYMCXW");
+ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
 // need width and height for styling
 const width: number = window.innerWidth;
 const height: number = window.innerHeight;
 
 // bchiang's colors
-const white = '#e6f1ff';
-const green = '#64ffda';
+const white : string = '#e6f1ff';
+const green : string = '#64ffda';
 // const lightestSlate = '#ccd6f6'
-const lightSlate = '#a8b2d1';
-const slate = '#8892b0';
+const lightSlate : string = '#a8b2d1';
+const slate : string = '#8892b0';
 // const lightestNavy = '#233554'
 // const lightNavy = '#112240'
-const navy = '#0a192f';
+const navy : string = '#0a192f';
 
 // animations with keyframes
 const fadeDownAni: Keyframes = keyframes`${fadeInDownBig}`;
