@@ -13,6 +13,8 @@ import rlbanner from './images/banner-1.png';
 import rluse from './images/app1-1.png';
 import ilts from './images/banner-0.png';
 import sep from './images/sep.png';
+import otl1 from './images/otl-1.png';
+import otl2 from './images/otl-2.png';
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-4QW3CYMCXW");
@@ -333,6 +335,7 @@ export default function App() {
   const [screen2Disp, setScreen2Disp] : [boolean, Dispatch<SetStateAction<boolean>>] = useState(initBool);
   const [screen3Disp, setScreen3Disp] : [boolean, Dispatch<SetStateAction<boolean>>] = useState(initBool);
   const [screen4Disp, setScreen4Disp] : [boolean, Dispatch<SetStateAction<boolean>>] = useState(initBool);
+  const [screen5Disp, setScreen5Disp] : [boolean, Dispatch<SetStateAction<boolean>>] = useState(initBool);
 
   // what we do on launch
   useEffect(() => {
@@ -358,6 +361,9 @@ export default function App() {
           if (entry.target.id === 'hiddenscreen4' && screen4Disp === false) {
             setScreen4Disp(true);
           }
+          if (entry.target.id === 'hiddenscreen5' && screen5Disp === false) {
+            setScreen5Disp(true);
+          }
         }
       });
     };
@@ -379,6 +385,10 @@ export default function App() {
     if (screen4 !== null) {
       io.observe(screen4);
     }
+    const screen5: Element | null = document.querySelector('#hiddenscreen5');
+    if (screen5 !== null) {
+      io.observe(screen5);
+    }
     // waiting to display name and navbars until the Hello there animation has finished
     setTimeout(() => {
       setMyNameDisp(true);
@@ -386,17 +396,17 @@ export default function App() {
     setTimeout(() => {
       setNavbarDisp(true);
     }, 4000);
-  }, [screen1Disp, screen2Disp, screen3Disp, screen4Disp]);
+  }, [screen1Disp, screen2Disp, screen3Disp, screen4Disp, screen5Disp]);
 
   return (
     <TopLevel>
       <NavbarSpacer style={navbarDisp ? { display: 'none' } : {}} />
       <Navbar style={navbarDisp ? {} : { display: 'none' }}>
         <NavbarText style={{ left: width * 0.05 }}>NICKGREENSF</NavbarText>
-        <NavbarLink style={{ left: width * 0.55 }} href="#about">
-          ABOUT
+        <NavbarLink style={{ left: width * 0.55 }} href="#onthelanes">
+          ON THE LANES
         </NavbarLink>
-        <NavbarLink style={{ left: width * 0.65 }} href="#stardle">
+        <NavbarLink style={{ left: width * 0.67 }} href="#stardle">
           STARDLE
         </NavbarLink>
         <NavbarLink style={{ left: width * 0.75 }} href="#rtl">
@@ -482,7 +492,7 @@ export default function App() {
               <Green>Docker.</Green>
             </DescText>
             <DescText>
-              <a id="stardle" />I ambitiously look forward to my time spent as a
+              I ambitiously look forward to my time spent as a
               professional software developer and the many challenges it will
               bring. Thanks for reading!
             </DescText>
@@ -494,6 +504,9 @@ export default function App() {
       </Screen>
       <AniScreen style={screen1Disp ? {} : { display: 'none' }}>
         <AdaptedGrid>
+          <ImageHolder>
+            <RestrictedImage src={me} />
+          </ImageHolder>
           <div>
             <Title>About Me</Title>
             <DescText>
@@ -519,15 +532,82 @@ export default function App() {
               <Green>C++,</Green> <Green>MySQL,</Green> <Green>Sass,</Green> and{' '}
               <Green>Docker.</Green>
             </DescText>
-            <DescText>
-              <a id="stardle" />I ambitiously look forward to my time spent as a
+            <a id="onthelanes" />
+            <DescText>I ambitiously look forward to my time spent as a
               professional software developer and the many challenges it will
               bring. Thanks for reading!
             </DescText>
           </div>
+        </AdaptedGrid>
+      </AniScreen>
+      <Screen
+        id="hiddenscreen5"
+        style={screen5Disp ? { display: 'none' } : { visibility: 'hidden' }}
+      >
+        <AdaptedGrid>
+          <div>
+            <Title>
+              On the Lanes
+            </Title>
+            <DescText>
+              As my skills as a programmer developed, I started wanting to build a website using two services I wasn't previously very familiar with, but which I knew would fit my skill set: Docker and AWS. I've loved bowling my whole life, and when I started to get back into it recently, the idea of a site where users could post and explain their own games struck me as a way to marry the two interests.
+            </DescText>
+            <DescText>
+              Users of On the Lanes can create an account and submit their scores to the database. The site keeps track of the user's average, and the user can attach other details of their games to the submissions if they want to share information about them. It largely serves as a tech demo, but still serves a purpose I hope some will find useful.
+            </DescText>
+          </div>
           <ImageHolder>
-            <RestrictedImage src={me} />
+            <RestrictedImage src={otl1} />
           </ImageHolder>
+          <ImageHolder>
+            <RestrictedImage src={otl2} />
+          </ImageHolder>
+          <div style={{ marginTop: height / 75 }}>
+            <DescText>
+              On the Lanes was built in July 2022. The front end is in Typescript and the backend is in Python, hosted with a Docker container. I had fun building this site, and it kept me tied to my work during periods where that proved difficult. It was also a great opportunity to get more comfortable with the aforementioned services.
+            </DescText>
+            <DescText>
+              On the Lanes was uploaded in July, to{' '}
+              <SiteLink href="http://onthelanes.xyz" target="_blank">
+                onthelanes.xyz
+              </SiteLink>
+              . I've been using it as my personal bowling blog, and you can too!
+            </DescText>
+          </div>
+        </AdaptedGrid>
+      </Screen>
+      <AniScreen style={screen5Disp ? {} : { display: 'none' }}>
+      <AdaptedGrid>
+          <div>
+            <Title>
+              On the Lanes
+            </Title>
+            <DescText>
+              As my skills as a programmer developed, I started wanting to build a website using two services I wasn't previously very familiar with, but which I knew would fit my skill set: <Green>Docker</Green> and <Green>AWS</Green>. I've loved bowling my whole life, and when I started to get back into it recently, the idea of a site where users could post and explain their own games struck me as a way to marry the two interests.
+            </DescText>
+            <DescText>
+              Users of On the Lanes can create an account and submit their scores to the database. The site keeps track of the user's average, and the user can attach other details of their games to the submissions if they want to share information about them. It largely serves as a tech demo, but still serves a purpose I hope some will find useful.
+            </DescText>
+          </div>
+          <ImageHolder>
+            <RestrictedImage src={otl1} />
+          </ImageHolder>
+          <ImageHolder>
+            <RestrictedImage src={otl2} />
+          </ImageHolder>
+          <div style={{ marginTop: height / 75 }}>
+            <DescText>
+              On the Lanes was built in July 2022. The front end is in Typescript and the backend is in Python, hosted with a Docker container. I had fun building this site, and it kept me tied to my work during periods where that proved difficult. It was also a great opportunity to get more comfortable with the aforementioned services.
+            </DescText>
+            <DescText>
+              On the Lanes was uploaded in July, to{' '}
+              <SiteLink href="http://onthelanes.xyz" target="_blank">
+                onthelanes.xyz
+              </SiteLink>
+              . I've been using it as my personal bowling blog, and you can too!
+            </DescText>
+          </div>
+          <a id="stardle" />
         </AdaptedGrid>
       </AniScreen>
       <Screen
@@ -580,7 +660,6 @@ export default function App() {
           <ImageHolder>
             <RestrictedImage src={stardle2} />
           </ImageHolder>
-          <a id="rtl" />
         </AdaptedGrid>
       </Screen>
       <AniScreen style={screen2Disp ? {} : { display: 'none' }}>
@@ -683,7 +762,6 @@ export default function App() {
               </SiteLink>
               .
             </DescText>
-            <a id="projects" />
           </div>
         </AdaptedGrid>
       </Screen>
