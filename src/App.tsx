@@ -466,6 +466,9 @@ export default function App() {
         style={screen1Disp ? { display: 'none' } : { visibility: 'hidden' }}
       >
         <AdaptedGrid>
+          <ImageHolder>
+            <RestrictedImage src={me} />
+          </ImageHolder>
           <div>
             <Title>About Me</Title>
             <DescText>
@@ -497,9 +500,6 @@ export default function App() {
               bring. Thanks for reading!
             </DescText>
           </div>
-          <ImageHolder>
-            <RestrictedImage src={me} />
-          </ImageHolder>
         </AdaptedGrid>
       </Screen>
       <AniScreen style={screen1Disp ? {} : { display: 'none' }}>
