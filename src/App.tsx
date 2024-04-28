@@ -1,10 +1,6 @@
 import React, { useState, useEffect, Dispatch, SetStateAction } from 'react';
-import styled, { StyledComponent } from 'styled-components';
 import ReactGA from "react-ga4";
 import './App.css';
-import me from './images/me.jpg';
-import stardle from './images/stardle.png';
-import stardle2 from './images/stardle-2.png';
 import rlbanner from './images/banner-1.png';
 import rluse from './images/app1-1.png';
 import ilts from './images/banner-0.png';
@@ -41,6 +37,8 @@ import {
   TopLevel
 } from './styles/styledcomponents';
 import StardleScreen from './components/StardleScreen';
+import AboutScreen from './components/AboutScreen';
+import RoutineListScreen from './components/RoutineListScreen';
 
 ReactGA.initialize("G-4QW3CYMCXW");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
@@ -193,80 +191,10 @@ export default function App() {
         id="hiddenscreen1"
         style={screen1Disp ? { display: 'none' } : { visibility: 'hidden' }}
       >
-        <AdaptedGrid>
-          <ImageHolder>
-            <RestrictedImage src={me} />
-          </ImageHolder>
-          <div>
-            <Title>About Me</Title>
-            <DescText>
-              I started coding in high school and was immediately drawn to it. I
-              liked watching myself get better at it - it struck me as a skill
-              worth learning, and worth making into a trade. After graduating
-              from San Francisco State in February 2022, majoring in computer
-              science, I've been looking for work while making myself the best
-              coder I can possibly be through both personal projects and
-              comprehensive algorithm practice.
-            </DescText>
-            <DescText>
-              What I like about coding and development is the many problems it
-              presents through the same overall lens; various coding projects
-              and problems I have worked on have felt like anything from math
-              homework to making a short film, and I appreciate how much
-              diversity the field can bring out.
-            </DescText>
-            <DescText>
-              I work mostly in <Green>Python</Green> and{' '}
-              <Green>Typescript,</Green> and have experience in many other tools
-              and languages, such as <Green>Java,</Green> <Green>C,</Green>{' '}
-              <Green>C++,</Green> <Green>MySQL,</Green> <Green>Sass,</Green> and{' '}
-              <Green>Docker.</Green>
-            </DescText>
-            <DescText>
-              I ambitiously look forward to my time spent as a
-              professional software developer and the many challenges it will
-              bring. Thanks for reading!
-            </DescText>
-          </div>
-        </AdaptedGrid>
+        <AboutScreen />
       </Screen>
       <AniScreen style={screen1Disp ? {} : { display: 'none' }}>
-        <AdaptedGrid>
-          <ImageHolder>
-            <RestrictedImage src={me} />
-          </ImageHolder>
-          <div>
-            <Title>About Me</Title>
-            <DescText>
-              I started coding in high school and was immediately drawn to it. I
-              liked watching myself get better at it - it struck me as a skill
-              worth learning, and worth making into a trade. After graduating
-              from San Francisco State in February 2022, majoring in computer
-              science, I've been looking for work while making myself the best
-              coder I can possibly be through both personal projects and
-              comprehensive algorithm practice.
-            </DescText>
-            <DescText>
-              What I like about coding and development is the many problems it
-              presents through the same overall lens; various coding projects
-              and problems I have worked on have felt like anything from math
-              homework to making a short film, and I appreciate how much
-              diversity the field can bring out.
-            </DescText>
-            <DescText>
-              I work mostly in <Green>Python</Green> and{' '}
-              <Green>Typescript,</Green> and have experience in many other tools
-              and languages, such as <Green>Java,</Green> <Green>C,</Green>{' '}
-              <Green>C++,</Green> <Green>MySQL,</Green> <Green>Sass,</Green> and{' '}
-              <Green>Docker.</Green>
-            </DescText>
-            <a id="onthelanes" />
-            <DescText>I ambitiously look forward to my time spent as a
-              professional software developer and the many challenges it will
-              bring. Thanks for reading!
-            </DescText>
-          </div>
-        </AdaptedGrid>
+        <AboutScreen />
       </AniScreen>
       <Screen
         id="hiddenscreen5"
@@ -351,105 +279,10 @@ export default function App() {
         id="hiddenscreen3"
         style={screen3Disp ? { display: 'none' } : { visibility: 'hidden' }}
       >
-        <AdaptedGrid>
-          <div>
-            <Title>RoutineList</Title>
-            <DescText>
-              While a student at SFSU, I took a class called Human Computer
-              Interaction, during which we had to design a mobile app. After
-              making my design, i realized two things, first that the design was
-              very achievable, and second, that it would make more sense for me
-              to make it as a Chrome extension. RoutineList was born!
-            </DescText>
-            <DescText>
-              RoutineList is a to-do list app. Users can set tasks for
-              themselves to a specific time of day and days of the week, and
-              those tasks will uncheck themselves on those days of the week at
-              those times of day. It ended up being very useful for me at a time
-              where I needed a little help self-directing, and it's always great
-              to get utility out of your own work.
-            </DescText>
-          </div>
-          <ImageHolder>
-            <RestrictedImage src={rlbanner} />
-          </ImageHolder>
-          <ImageHolder>
-            <RestrictedImage src={rluse} />
-          </ImageHolder>
-          <div style={{ marginTop: height / 75 }}>
-            <DescText>
-              At a time where I was still getting my legs under me as a
-              developer, I found the design process for RoutineList to be very
-              satisfying, building it in standard HTML/CSS/JS and taking
-              advantage of tools like Chrome's user storage. It was finished by
-              May 2021, in time to present it for the final project of the
-              class. I'd love to flesh out the design more in the future, and
-              I'm comfortable with where it is for now.
-            </DescText>
-            <DescText>
-              If, like me, you're feeling a little disorganized, you can check
-              out the extension for yourself{' '}
-              <SiteLink
-                href="https://chrome.google.com/webstore/detail/routinelist/eckihielkdkafbhekdgpbjlloiddjdpd?hl=en"
-                target="_blank"
-              >
-                here
-              </SiteLink>
-              .
-            </DescText>
-          </div>
-        </AdaptedGrid>
+        <RoutineListScreen />
       </Screen>
       <AniScreen style={screen3Disp ? {} : { display: 'none' }}>
-        <AdaptedGrid>
-          <div>
-            <Title>RoutineList</Title>
-            <DescText>
-              While a student at SFSU, I took a class called Human Computer
-              Interaction, during which we had to design a mobile app. After
-              making my design, i realized two things, first that the design was
-              very achievable, and second, that it would make more sense for me
-              to make it as a Chrome extension. RoutineList was born!
-            </DescText>
-            <DescText>
-              RoutineList is a to-do list app. Users can set tasks for
-              themselves to a specific time of day and days of the week, and
-              those tasks will uncheck themselves on those days of the week at
-              those times of day. It ended up being very useful for me at a time
-              where I needed a little help self-directing, and it's always great
-              to get utility out of your own work.
-            </DescText>
-          </div>
-          <ImageHolder>
-            <RestrictedImage src={rlbanner} />
-          </ImageHolder>
-          <ImageHolder>
-            <RestrictedImage src={rluse} />
-          </ImageHolder>
-          <div style={{ marginTop: height / 75 }}>
-            <DescText>
-              At a time where I was still getting my legs under me as a
-              developer, I found the design process for RoutineList to be very
-              satisfying, building it in standard HTML/CSS/JS and taking
-              advantage of tools like Chrome's user storage. It was finished by
-              May 2021, in time to present it for the final project of the
-              class. I'd love to flesh out the design more in the future, and
-              I'm comfortable with where it is for now.
-            </DescText>
-            <DescText>
-              If, like me, you're feeling a little disorganized, you can check
-              out the extension for yourself{' '}
-              <SiteLink
-                href="https://chrome.google.com/webstore/detail/routinelist/eckihielkdkafbhekdgpbjlloiddjdpd?hl=en"
-                target="_blank"
-              >
-                here
-              </SiteLink>
-              .
-            </DescText>
-            <a id="projects" />
-          </div>
-        </AdaptedGrid>
+        <RoutineListScreen />
       </AniScreen>
       <Screen
         id="hiddenscreen4"
