@@ -14,9 +14,7 @@ export default function StardleScreen(){
               liked watching myself get better at it - it struck me as a skill
               worth learning, and worth making into a trade. After graduating
               from San Francisco State in February 2022, majoring in computer
-              science, I've been looking for work while making myself the best
-              coder I can possibly be through both personal projects and
-              comprehensive algorithm practice.
+              science, I began my journey into the world of professional software work.
             </DescText>
             <DescText>
               What I like about coding and development is the many problems it
