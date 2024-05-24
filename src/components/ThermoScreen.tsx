@@ -27,8 +27,8 @@ export default function StardleScreen(){
           </ImageHolder>
           <div style={{ marginTop: height / 75 }}>
             <DescText>
-              The skills I've learned at Thermo about concepts such as <Green>code organization</Green> and <Green>professional development</Green> have been invaluable. It's certainly given me a solid intro to the 
-              industry in a part of it that's pretty unique and interesting to be a part of.
+              The skills I've learned at Thermo about concepts such as <Green>code organization</Green> and <Green>professional development</Green> have been invaluable. 
+              The people I've met through this experience have done their best to give me a solid foundation that will serve me well either with them or with another team.
             </DescText>
             <DescText>
               As I move forward in my career, I hope to take these skills with me and build on them with the people and places I come across in my professional life.

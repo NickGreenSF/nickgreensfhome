@@ -203,6 +203,7 @@ export default function App() {
       <AniScreen style={screen5Disp ? {} : { display: 'none' }}>
         <ThermoScreen></ThermoScreen>
       </AniScreen>
+      <a id="stardle" />
       <Screen
         id="hiddenscreen2"
         style={screen2Disp ? { display: 'none' } : { visibility: 'hidden' }}
@@ -212,6 +213,7 @@ export default function App() {
       <AniScreen style={screen2Disp ? {} : { display: 'none' }}>
         <StardleScreen />
       </AniScreen>
+      <a id="rtl" />
       <Screen
         id="hiddenscreen3"
         style={screen3Disp ? { display: 'none' } : { visibility: 'hidden' }}
@@ -221,6 +223,7 @@ export default function App() {
       <AniScreen style={screen3Disp ? {} : { display: 'none' }}>
         <RoutineListScreen />
       </AniScreen>
+      <a id="projects" />
       <Screen
         id="hiddenscreen4"
         style={screen4Disp ? { display: 'none' } : { visibility: 'hidden' }}

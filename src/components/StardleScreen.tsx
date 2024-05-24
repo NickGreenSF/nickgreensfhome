@@ -41,7 +41,7 @@ export default function StardleScreen(){
               for.
             </DescText>
             <DescText>
-              I released STARDLE in May, on{' '}
+              I released STARDLE in May 2023, on{' '}
               <SiteLink href="https://stardle.xyz" target="_blank">
                 stardle.xyz
               </SiteLink>
