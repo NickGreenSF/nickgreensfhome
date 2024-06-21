@@ -156,7 +156,7 @@ export default function App() {
           LinkedIn
         </LeftText>
         <LeftText
-          href="https://drive.google.com/file/d/1KWzkqPvspUXD7olK8cfC88-L6VbKyYvE/view?usp=sharing"
+          href="https://drive.google.com/file/d/128uKk7ZbUI8pDseJm0DxVup1EMSuzdsz/view?usp=sharing"
           target="_blank"
           style={{ right: height * 0.3 }}
         >
